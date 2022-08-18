@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>eAlbum</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="action-bar">
+        <span id="saveAlbum" title="Save Changes" class="material-icons">save</span>
+        <span id="addAlbum" title="Create Album" class="material-icons">create_new_folder</span>
+        <span id="deleteAlbum" title="Delete Album" class="material-icons">delete</span>
+        <span id="renameAlbum" title="Rename Album" class="material-icons">drive_file_rename_outline</span>
+        <span id="importAlbum" title="Upload Album" class="material-icons">upload</span>
+        <span id="exportAlbum" title="Download Album" class="material-icons">download</span>
+        <span id="playAlbum" title="Slide Show" class="material-icons">play_arrow</span>
+        <select id="selectAlbum">
+            <option value="-1" >Select an album</option>
+        </select>
+        <input type="file" multiple="false" id="uploadFile">
+    </div>
+    <div id="content">
+        <div id="content-list">
+            <div id="newSlide">New Slide</div>
+            <div id="slide-list"></div>
+        </div>
+        <div id="content-body">
+            <div id="create-slide">
+                <div>
+                    <input id="slideImg" type="text" placeholder="Image URL">
+                </div>
+                <div>
+                    <input id="slideTitle" type="text" placeholder="Title">
+                </div>
+                <div>
+                    <textarea id="slideDetails" rows="8" placeholder="Details" ></textarea>
+                </div>                
+                <button id="save-slide">Save Slide</button>
+            </div>
+
+            <div id="slide-show">
+                <div id="slide-title">
+                    <h2></h2>
+                    <span id="edit-slide" class="material-icons">edit</span>
+                    <span id="delete-slide" class="material-icons">delete_outline</span>
+                </div>
+                <div id="slide-body">
+                    <div id="slide-details">
+                        <p></p>
+                    </div>
+                    <div id="slide-img">
+                        <img src="" alt="img">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div id="overlay">
+        <h1>Please select an album or create a new one to display</h1>
+    </div>
+    <div id="play-overlay">
+    </div>
+    <template id="allTemplates">
+        <div class="slide">
+            <div class="slide-header">
+                <h5></h5>
+            </div>
+            <div class="slide-content">
+                <div class="content-details">
+                    <p></p>
+                </div>
+                <div class="content-img">
+                    <img src="" alt="img"> 
+                </div>
+            </div>
+        </div> 
+    </template>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
